@@ -1,0 +1,51 @@
+{
+    "data_security_mode": "DATA_SECURITY_MODE_DEDICATED",
+    "single_user_name": "data_engineers",
+    "cluster_name": "test-job-node",
+    "custom_tags": {
+        "name": "test-node"
+    },
+    "kind": "CLASSIC_PREVIEW",
+    "spark_conf": {
+        "spark.sql.autoBroadcastJoinThreshold": "-1",
+        "spark.driver.memoryOverhead": "500",
+        "spark.executor.cores": "2",
+        "spark.executor.memory": "6g",
+        "spark.driver.maxResultSize": "8g",
+        "spark.sql.shuffle.partitions": "50",
+        "spark.executor.instances": "1",
+        "spark.driver.memory": "4g",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.default.parallelism": "50",
+        "spark.driver.cores": "1",
+        "spark.executor.memoryOverhead": "500"
+    },
+    "spark_env_vars": {
+        "aws_access_key": "hello",
+        "aws_secret_key": "world",
+        "aws_region": "eu-west-1"
+    },
+    "azure_attributes": {
+        "availability": "SPOT_WITH_FALLBACK_AZURE",
+        "first_on_demand": 1,
+        "spot_bid_max_price": -1
+    },
+    "cluster_log_conf": {
+        "dbfs": {
+            "destination": "dbfs:/test-cluster-logs"
+        }
+    },
+    "runtime_engine": "PHOTON",
+    "spark_version": "15.4.x-scala2.12",
+    "node_type_id": "Standard_D4ds_v5",
+    "driver_node_type_id": "Standard_D4ds_v5",
+    "autotermination_minutes": 10,
+    "enable_elastic_disk": true,
+    "use_ml_runtime": true,
+    "is_single_node": false,
+    "enable_local_disk_encryption": false,
+    "autoscale": {
+        "min_workers": 2,
+        "max_workers": 8
+    }
+}
