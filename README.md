@@ -11,6 +11,10 @@
     ```sh
     python3.11 -m venv .venv
     source .venv/bin/activate
+    pip list
+    pip install pandas==2.2 
+    pip freeze > requirements.txt
+    pip install -r requirements.txt
     deactivate
     ```
 
@@ -61,6 +65,7 @@
     ```
 
 #### databricks connect
+- https://learn.microsoft.com/en-us/azure/databricks/dev-tools/databricks-connect/python/advanced
     ```sh
     python -m pip install databricks-connect==15.1.* --disable-pip-version-check --no-python-version-warning
     ```
